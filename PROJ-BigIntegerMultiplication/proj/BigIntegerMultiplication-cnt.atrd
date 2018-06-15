@@ -1,0 +1,24 @@
+{
+  "Result":
+  {	
+	"ParameterOrder"   : ["N"],
+    "IndicatorOrder" : ["CNT1"],
+
+	"Parameters":   [
+	{
+       "Name":        "N",             
+       "Description": "The size of the test", 
+       "Type":        "int"       
+      }
+    ],
+  
+
+    "Indicators":   [     
+      {
+       "Name":        "CNT1",             
+       "Description": "Description of CNT1", 
+       "Type":        "counter"   
+      }      
+    ]
+  }
+}
