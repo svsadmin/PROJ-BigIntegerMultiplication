@@ -1,0 +1,25 @@
+{
+  "Algorithm" : {	
+
+   "Name"           : "FFT",
+   "ShortName"      : "algorithm_short_name",             
+   "Description"    : "algorithm_dascription",
+   "Author"         : "author_name",
+   "Date"           : "06, 2018",
+   "Classes"        : ["FFTAlgorithm.java",
+						"org/apache/commons/math3/complex/Complex",
+						"org/apache/commons/math3/transform/DftNormalization",
+						"org/apache/commons/math3/transform/FastFourierTransformer",
+						"org/apache/commons/math3/transform/TransformType"],
+   "MainClassName"  : "FFTAlgorithm",
+
+
+   "Language"       : "Java",
+  
+   "Presenters"     : [],
+
+   "AlgorithmDescHTML" : "algorithm.html",
+   "AlgorithmRefHTML"  : "references.html"
+
+  }
+} 

@@ -1,32 +1,33 @@
 <html>
+
 <style>
 tr.spaceUnder>td {
   padding-bottom: 1em;
 }
 </style>
 
-
-<p>    ... please edit %thisfile% to provide a detailed description about the algorithm for the BigIntegerMultiplication project. </p>
-
+<p>The big integer multiplication algorithm multiplies two given large integers. </p>
 
 <table>
 <tr class="spaceUnder"><td><b>Input:</b></td>
-    <td>...</td>
+    <td>Two hexadecimal <code>byte arrays</code> \( firstFactor, secondFactor \) of dimension <code>n1</code> and <code>n2</code></td>
 </tr>
 
 <tr class="spaceUnder"><td><b>Output:</b></td> 
-    <td>...</td>
+    <td>Hexadecimal <code>byte array</code> \( result \)</td>
 </tr>
 
 <tr class="spaceUnder"><td><b>Test of correctness: &nbsp;&nbsp;&nbsp;</b></td> 
-    <td>...</td>
+    <td>The resulting array \( result \) is correct iff arrays \( firstFactor \) and \( secondFactor \) converted to decimal numbers hold the following equation:
+	$$ firstFactor_{10} * secondFactor_{10} = result_{10} $$
 </tr>
 
 
 <tr class="spaceUnder"><td valign=top><b>Implementation:</b></td>
-    <td>...</td>        
+    <td>To implement a big integer multipliaction algorithm the author has to write 
+        a <code>java</code> class extending the 
+        <code>BigIntegerMultiplicationAbsAlgorithm</code> class and implementing its
+        <code>execute(byte [] firstFactor, byte [] secondFactor, byte [] result)</code> method.
+ 
 </tr>
-
 </table>
-
-</html>        

@@ -1,0 +1,103 @@
+import java.lang.Math; // headers MUST be above the first class
+import java.math.BigInteger;
+
+// one class needs to have a main() method
+public class HelloWorld
+{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args)
+  {
+    OtherClass myObject = new OtherClass("Hello World!");
+    System.out.print(myObject);
+    
+    byte [] b = new BigInteger(new BigInteger("1052688").toString(16), 16).toByteArray();
+    byte x = (byte)0xF0;
+    System.out.println(x);
+    int z = 0xFF&x; //iz byta v integer
+    System.out.println(z);
+    
+    
+    int[] a = new int[]{1,3,5,2};
+    int[] b1 = new int[]{4,1,8};
+    
+    int[] o = multiply(a, b1);
+    System.out.println(o);
+    for (int k = 0; k < o.length; k++) {
+    	System.out.println(o[k]);
+    }
+    
+    System.out.println(b[2]);
+    
+  }
+  
+  
+  
+  public static int[] multiply(int[] f1, int[] f2) {
+
+    int[][] t = new int[f2.length][f1.length + f2.length];
+    int dolzina = f1.length + f2.length;
+    
+    for (int i = 0; i<f2.length; i++) {
+      
+      int prenos = 0;
+      
+      for (int j = 1; j<f1.length + 1; j++) {
+        
+        int produkt = f2[i] * f1[f1.length - j];
+        int trenutniPrenos = prenos;
+        prenos = 0;
+        
+        while (produkt >= 10) {
+          prenos++;
+          produkt = produkt-10;
+        }
+        
+        t[i][f1.length - j + i + 1] = produkt + trenutniPrenos;
+      }
+      
+      t[i][0 + i] = prenos;
+      
+    }
+    
+    
+    for (int i = 0; i<t.length; i++) {
+      System.out.println();
+      for (int j = 0; j<t[i].length; j++) {
+      	System.out.print(t[i][j]);
+      }
+    }
+    
+    int[] result = new int [dolzina];
+    
+    int prenos = 0;
+    for (int j = dolzina-1; j>= 0; j--) {
+      result[j] = prenos;
+      prenos = 0;
+      for (int i = f2.length-1; i>= 0; i--) {
+       	 result[j] = result[j] + t[i][j];
+        
+        while (result[j] >= 10) {
+        result[j]-=10;
+        prenos++;
+      	}
+      }
+    }
+    
+    return result;
+	}
+}
+
+// you can add other public classes to this editor in any order
+public class OtherClass
+{
+  private String message;
+  private boolean answer = false;
+  public OtherClass(String input)
+  {
+    message = "Why, " + input + " Isn't this something?";
+  }
+  public String toString()
+  {
+    return message;
+  }
+}
