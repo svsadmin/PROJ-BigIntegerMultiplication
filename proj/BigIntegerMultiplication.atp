@@ -9,8 +9,8 @@
     "FFT"
   ],
   "TestSets": ["TestSet1"],
-  "ProjectJARs": [],
-  "AlgorithmJARs": [],
+  "ProjectJARs": ["commons-math3-3.6.1.jar"],
+  "AlgorithmJARs": ["commons-math3-3.6.1.jar"],
   "EMExecFamily": "",
   "CNTExecFamily": "",
   "JVMExecFamily": "",
